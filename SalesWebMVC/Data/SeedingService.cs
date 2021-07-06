@@ -16,6 +16,7 @@ namespace SalesWebMVC.Data
             _context = context;
         }
 
+        //this method uses the constructors without id parameter from the classes
         public void Seed()
         {
             if (_context.Department.Any() || 
@@ -24,8 +25,6 @@ namespace SalesWebMVC.Data
             {
                 return; //DB has (already) been seeded
             }
-
-            //this method uses the constructors without id parameter from the classes
 
             Department d1 = new Department("Computers");
             Department d2 = new Department("Electronics");
